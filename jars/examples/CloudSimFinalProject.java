@@ -85,10 +85,10 @@ public class CloudSimFinalProject {
             //VM description
             int vmid = 0;
             int mips = 250;
-            long size = 256; //image size (MB)
-            int ram = 512; //vm memory (MB)
-            long bw = 1000; //bandwidth (Mbps) [1Gbps]
-            int pesNumber = 1; //number of cpus
+            long size = 256;    //image size (MB)
+            int ram = 512;      //vm memory (MB)
+            long bw = 1000;     //bandwidth (Mbps) [1Gbps]
+            int pesNumber = 1;  //number of cpus
             String vmm = "Xen"; //VMM name
 
             //create two VMs
@@ -110,9 +110,9 @@ public class CloudSimFinalProject {
 
             //Cloudlet properties
             int id = 0;
-            long length = 40000; //(MIPS)
-            long fileSize = 300; //(MB)
-            long outputSize = 300; //(MB)
+            long length = 40000;    //(MIPS)
+            long fileSize = 300;    //(MB)
+            long outputSize = 300;  //(MB)
             UtilizationModel utilizationModel = new UtilizationModelFull();
 
             Cloudlet cloudlet1 = new Cloudlet(id, length, pesNumber, fileSize, outputSize, utilizationModel, utilizationModel, utilizationModel);
@@ -172,9 +172,9 @@ public class CloudSimFinalProject {
 
         //4. Create Hosts with its id and list of PEs and add them to the list of machines
         int hostId=0;
-        int ram = 45568; //host memory (MB) [45 GB]
-        long storage = 10240000; //host storage [10,000 GB]
-        int bw = 100000; //bandwidth (Mbps) [100Gbps]
+        int ram = 45568;            //host memory (MB) [45 GB]
+        long storage = 10240000;    //host storage [10,000 GB]
+        int bw = 100000;            //bandwidth (Mbps) [100Gbps]
 
         hostList.add(
                 new Host(
@@ -211,14 +211,14 @@ public class CloudSimFinalProject {
         //    properties of a data center: architecture, OS, list of
         //    Machines, allocation policy: time- or space-shared, time zone
         //    and its price (G$/Pe time unit).
-        String arch = "x86";      // system architecture
-        String os = "Linux";          // operating system
-        String vmm = "Xen";
-        double time_zone = 10.0;         // time zone this resource located
+        String arch = "x86";            // system architecture
+        String os = "Linux";            // operating system
+        String vmm = "Xen";             // VM name
+        double time_zone = 10.0;        // time zone this resource located
         double cost = 3.0;              // the cost of using processing in this resource
-        double costPerMem = 0.05;		// the cost of using memory in this resource
-        double costPerStorage = 0.001;	// the cost of using storage in this resource
-        double costPerBw = 0.0;			// the cost of using bw in this resource
+        double costPerMem = 0.05;       // the cost of using memory in this resource
+        double costPerStorage = 0.001;  // the cost of using storage in this resource
+        double costPerBw = 0.0;         // the cost of using bw in this resource
         LinkedList<Storage> storageList = new LinkedList<Storage>();	//we are not adding SAN devices by now
 
         DatacenterCharacteristics characteristics = new DatacenterCharacteristics(

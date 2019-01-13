@@ -45,7 +45,7 @@ import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
  * to complete the execution depending on
  * the requested VM performance.
  */
-public class CloudSimExample3 {
+public class CloudSimFinalProject {
 
     /** The cloudlet list. */
     private static List<Cloudlet> cloudletList;
@@ -58,7 +58,7 @@ public class CloudSimExample3 {
      */
     public static void main(String[] args) {
 
-        Log.printLine("Starting CloudSimExample3...");
+        Log.printLine("Starting CloudSimFinalProject");
 
         try {
             // First step: Initialize the CloudSim package. It should be called
@@ -105,7 +105,6 @@ public class CloudSimExample3 {
             //submit vm list to the broker
             broker.submitVmList(vmlist);
 
-
             //Fifth step: Create two Cloudlets
             cloudletList = new ArrayList<Cloudlet>();
 
@@ -147,7 +146,7 @@ public class CloudSimExample3 {
 
             printCloudletList(newList);
 
-            Log.printLine("CloudSimExample3 finished!");
+            Log.printLine("CloudSimFinalProject finished!");
         }
         catch (Exception e) {
             e.printStackTrace();

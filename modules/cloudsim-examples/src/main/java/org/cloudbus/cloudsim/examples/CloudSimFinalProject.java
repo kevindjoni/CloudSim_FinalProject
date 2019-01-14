@@ -26,6 +26,12 @@ import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
+//Members
+//=======
+//Kevin Djoni               -   2001586376
+//Juanito Clement Tanjung   -   2001621611
+//Kenneth Wilson            -   2001622476
+
 public class CloudSimFinalProject {
     /** The cloudlet list. */
     private static List<Cloudlet> cloudletList;

@@ -16,34 +16,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/src/main/java/org/cloudbus/cloudsim/examples/CloudSimExample8.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/src/main/java/org/cloudbus/cloudsim/examples/CloudSimFinalProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+            <state relative-caret-position="3026">
+              <caret line="178" column="52" lean-forward="true" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2028#2055#1" expanded="true" />
-                <element signature="e#4757#4763#0" expanded="true" />
-                <element signature="e#6797#6806#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,6 +36,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>steve</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,29 +67,29 @@
           <expand>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="cloudsim-examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="cloudsim-examples" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="cloudsim-examples" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -113,7 +97,7 @@
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="cloudsim-examples" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -122,7 +106,7 @@
             </path>
             <path>
               <item name="cloudsim-package" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSim" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudSim_FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="cloudsim-examples" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -141,14 +125,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547471956835" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547473859057" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -222,17 +206,17 @@
       <updated>1547445469283</updated>
       <workItem from="1547445470517" duration="621000" />
       <workItem from="1547455474979" duration="6080000" />
+      <workItem from="1547471808093" duration="1914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6701000" />
+    <option name="totallyTimeSpent" value="8615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.254251" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22267206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -249,10 +233,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.25373134" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3283582" />
-      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -262,6 +245,7 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,13 +254,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/src/main/java/org/cloudbus/cloudsim/examples/CloudSimExample1.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -287,20 +264,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/src/main/java/org/cloudbus/cloudsim/examples/CloudSimExample8.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="799">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/cloudsim-examples/src/main/java/org/cloudbus/cloudsim/examples/CloudSimFinalProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="33" lean-forward="true" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+        <state relative-caret-position="3026">
+          <caret line="178" column="52" lean-forward="true" selection-start-line="178" selection-start-column="52" selection-end-line="178" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2028#2055#1" expanded="true" />
-            <element signature="e#4757#4763#0" expanded="true" />
-            <element signature="e#6797#6806#0" expanded="true" />
           </folding>
         </state>
       </provider>

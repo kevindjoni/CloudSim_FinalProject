@@ -159,7 +159,7 @@ public class CloudSimExample6 {
 		// Here are the steps needed to create a PowerDatacenter:
 		// 1. We need to create a list to store one or more
 		//    Machines
-		List<Host> hostList = new ArrayList<Host>();
+		List<Host> hostList = new ArrayList<>();
 
 		// 2. A Machine contains one or more PEs or CPUs/Cores. Therefore, should
 		//    create a list to store these PEs before creating

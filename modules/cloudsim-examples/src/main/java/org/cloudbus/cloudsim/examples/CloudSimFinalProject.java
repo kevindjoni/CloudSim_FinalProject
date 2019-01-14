@@ -26,12 +26,7 @@ import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
-//Members
-//=======
-//Kevin Djoni               -   2001586376
-//Juanito Clement Tanjung   -   2001621611
-//Kenneth Wilson            -   2001622476
-
+//Time-Shared Policy
 public class CloudSimFinalProject {
     /** The cloudlet list. */
     private static List<Cloudlet> cloudletList;
@@ -55,11 +50,12 @@ public class CloudSimFinalProject {
 
             // Initialize the CloudSim library
             CloudSim.init(num_user, calendar, trace_flag);
+            CloudSim.init(num_user, calendar, trace_flag);
 
             // Second step: Create Datacenters
             //Datacenters are the resource providers in CloudSim. We need at list one of them to run a CloudSim simulation
             @SuppressWarnings("unused")
-            Datacenter datacenter0 = createDatacenter("Datacenter_0");
+            Datacenter datacenter0 = createDatacenter("Datacenter1");
 
             //Third step: Create Broker
             DatacenterBroker broker = createBroker();
@@ -143,11 +139,12 @@ public class CloudSimFinalProject {
         // Here are the steps needed to create a PowerDatacenter:
         // 1. We need to create a list to store
         //    our machine
-        List<Host> hostList = new ArrayList<Host>();
+        List<Host> hostList = new ArrayList<>();
 
         // 2. A Machine contains one or more PEs or CPUs/Cores.
         // In this example, it will have only one core.
         List<Pe> peList = new ArrayList<Pe>();
+        List<Pe> peList1 = new ArrayList<Pe>();
 
         int mips = 1000;
 

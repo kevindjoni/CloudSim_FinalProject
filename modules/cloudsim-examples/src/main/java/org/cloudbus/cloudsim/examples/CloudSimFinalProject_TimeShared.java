@@ -39,7 +39,7 @@ public class CloudSimFinalProject_TimeShared {
 
         //VM Parameters
         long size = 256;    //image size (MB)
-        int ram = 5120;     //vm memory (MB)
+        int ram = 512;     //vm memory (MB)
         int mips = 250;
         long bw = 1000;
         int pesNumber = 1;  //number of cpus
@@ -61,7 +61,7 @@ public class CloudSimFinalProject_TimeShared {
         LinkedList<Cloudlet> list = new LinkedList<Cloudlet>();
 
         //cloudlet parameters
-        long length = 40000;
+        long length = 160000;
         long fileSize = 300;
         long outputSize = 300;
         int pesNumber = 1;

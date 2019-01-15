@@ -27,7 +27,7 @@ import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
 //Time-Shared Policy
-public class CloudSimFinalProject{
+public class CloudSimFinalProject_TimeShared{
     /** The cloudlet list. */
     private static List<Cloudlet> cloudletList;
     /** The vmlist. */
@@ -40,7 +40,7 @@ public class CloudSimFinalProject{
 
         //VM Parameters
         long size = 256;    //Image Size (MB)
-        int ram = 5120;     //VM memory (MB)
+        int ram = 512;     //VM memory (MB)
         int mips = 250;
         long bw = 1000;
         int pesNumber = 1;  //number of cpus
@@ -59,7 +59,6 @@ public class CloudSimFinalProject{
 
         return list;
     }
-
 
     private static List<Cloudlet> createCloudlet(int userId, int cloudlets){
         // Creates a container to store Cloudlets
@@ -82,60 +81,6 @@ public class CloudSimFinalProject{
         }
 
         return list;
-    }
-
-
-    ////////////////////////// STATIC METHODS ///////////////////////
-
-    /**
-     * Creates main() to run this example
-     */
-    public static void main(String[] args) {
-        Log.printLine("Starting CloudSim Time-Shared Policy");
-
-        try {
-            // First step: Initialize the CloudSim package. It should be called
-            // before creating any entities.
-            int num_user = 1;   // number of grid users
-            Calendar calendar = Calendar.getInstance();
-            boolean trace_flag = false;  // mean trace events
-
-            // Initialize the CloudSim library
-            CloudSim.init(num_user, calendar, trace_flag);
-
-            // Second step: Create Datacenters
-            //Datacenters are the resource providers in CloudSim. We need at list one of them to run a CloudSim simulation
-            @SuppressWarnings("unused")
-            Datacenter datacenter1 = createDatacenter("Datacenter_1");
-
-            //Third step: Create Broker
-            DatacenterBroker broker = createBroker();
-            int brokerId = broker.getId();
-
-            //Fourth step: Create VMs and Cloudlets and send them to broker
-            vmlist = createVM(brokerId,68);
-            cloudletList = createCloudlet(brokerId,68);
-
-            broker.submitVmList(vmlist);
-            broker.submitCloudletList(cloudletList);
-
-            // Fifth step: Starts the simulation
-            CloudSim.startSimulation();
-
-            // Final step: Print results when simulation is over
-            List<Cloudlet> newList = broker.getCloudletReceivedList();
-
-            CloudSim.stopSimulation();
-
-            printCloudletList(newList);
-
-            Log.printLine("CloudSim Time-Shared Policy finished!");
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            Log.printLine("The simulation has been terminated due to an unexpected error");
-        }
     }
 
     private static Datacenter createDatacenter(String name){
@@ -265,5 +210,58 @@ public class CloudSimFinalProject{
             }
         }
 
+    }
+
+    ////////////////////////// STATIC METHODS ///////////////////////
+
+    /**
+     * Creates main() to run this example
+     */
+    public static void main(String[] args) {
+        Log.printLine("Starting CloudSim Time-Shared Policy");
+
+        try {
+            // First step: Initialize the CloudSim package. It should be called
+            // before creating any entities.
+            int num_user = 1;   // number of grid users
+            Calendar calendar = Calendar.getInstance();
+            boolean trace_flag = false;  // mean trace events
+
+            // Initialize the CloudSim library
+            CloudSim.init(num_user, calendar, trace_flag);
+
+            // Second step: Create Datacenters
+            //Datacenters are the resource providers in CloudSim. We need at list one of them to run a CloudSim simulation
+            @SuppressWarnings("unused")
+            Datacenter datacenter1 = createDatacenter("Datacenter_1");
+
+            //Third step: Create Broker
+            DatacenterBroker broker = createBroker();
+            int brokerId = broker.getId();
+
+            //Fourth step: Create VMs and Cloudlets and send them to broker
+            vmlist = createVM(brokerId,68);
+            cloudletList = createCloudlet(brokerId,68);
+
+            broker.submitVmList(vmlist);
+            broker.submitCloudletList(cloudletList);
+
+            // Fifth step: Starts the simulation
+            CloudSim.startSimulation();
+
+            // Final step: Print results when simulation is over
+            List<Cloudlet> newList = broker.getCloudletReceivedList();
+
+            CloudSim.stopSimulation();
+
+            printCloudletList(newList);
+
+            Log.printLine("CloudSim Time-Shared Policy finished!");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            Log.printLine("The simulation has been terminated due to an unexpected error");
+        }
     }
 }

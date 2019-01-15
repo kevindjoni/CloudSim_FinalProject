@@ -6,27 +6,13 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.cloudbus.cloudsim.Cloudlet;
-import org.cloudbus.cloudsim.CloudletSchedulerTimeShared;
-import org.cloudbus.cloudsim.Datacenter;
-import org.cloudbus.cloudsim.DatacenterBroker;
-import org.cloudbus.cloudsim.DatacenterCharacteristics;
-import org.cloudbus.cloudsim.Host;
-import org.cloudbus.cloudsim.Log;
-import org.cloudbus.cloudsim.Pe;
-import org.cloudbus.cloudsim.Storage;
-import org.cloudbus.cloudsim.UtilizationModel;
-import org.cloudbus.cloudsim.UtilizationModelFull;
-import org.cloudbus.cloudsim.Vm;
-import org.cloudbus.cloudsim.VmAllocationPolicySimple;
-import org.cloudbus.cloudsim.VmSchedulerTimeShared;
-import org.cloudbus.cloudsim.VmSchedulerSpaceShared;
+import org.cloudbus.cloudsim.*;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
 import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
 
-public class CloudSimFinalProject {
+public class CloudSimFinalProject_SpaceShared {
     /** The cloudlet list. */
     private static List<Cloudlet> cloudletList;
     /** The vmlist. */
@@ -38,20 +24,19 @@ public class CloudSimFinalProject {
         LinkedList<Vm> list = new LinkedList<Vm>();
 
         //VM Parameters
-        long size = 256; //image size (MB)
-        int ram = 512; //vm memory (MB)
+        long size = 256;    //image size (MB)
+        int ram = 520;      //vm memory (MB)
         int mips = 250;
         long bw = 1000;
-        int pesNumber = 1; //number of cpus
+        int pesNumber = 1;  //number of cpus
         String vmm = "Xen"; //VMM name
 
         //create VMs
         Vm[] vm = new Vm[vms];
 
         for(int i=0;i<vms;i++){
-            vm[i] = new Vm(i, userId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerTimeShared());
             //for creating a VM with a space shared scheduling policy for cloudlets:
-            //vm[i] = Vm(i, userId, mips, pesNumber, ram, bw, size, priority, vmm, new CloudletSchedulerSpaceShared());
+            vm[i] = new Vm(i, userId, mips, pesNumber, ram, bw, size, vmm, new CloudletSchedulerSpaceShared());
 
             list.add(vm[i]);
         }
@@ -112,8 +97,8 @@ public class CloudSimFinalProject {
             int brokerId = broker.getId();
 
             //Fourth step: Create VMs and Cloudlets and send them to broker
-            vmlist = createVM(brokerId,68); //creating 20 vms
-            cloudletList = createCloudlet(brokerId,68); // creating 40 cloudlets
+            vmlist = createVM(brokerId,68);
+            cloudletList = createCloudlet(brokerId,178);
 
             broker.submitVmList(vmlist);
             broker.submitCloudletList(cloudletList);
@@ -148,19 +133,16 @@ public class CloudSimFinalProject {
         //    create a list to store these PEs before creating
         //    a Machine.
         List<Pe> peList1 = new ArrayList<Pe>();
+        List<Pe> peList2 = new ArrayList<Pe>();
 
         int mips = 25000;
 
-        // 3. Create PEs and add these into the list.
-        //for a quad-core machine, a list of 4 PEs is required:
-        peList1.add(new Pe(0, new PeProvisionerSimple(mips))); // need to store Pe id and MIPS Rating
-        peList1.add(new Pe(1, new PeProvisionerSimple(mips)));
-
-        //Another list, for a dual-core machine
-        List<Pe> peList2 = new ArrayList<Pe>();
-
-        peList2.add(new Pe(0, new PeProvisionerSimple(mips)));
-        peList2.add(new Pe(1, new PeProvisionerSimple(mips)));
+        int pe = 34;               //34 PE are each assigned to 1 VM; Therefore there are 68 PE in total
+        for(int i=0; i<pe; i++)
+        {
+            peList1.add(new Pe(i, new PeProvisionerSimple(mips)));  //34 PE to VM1
+            peList2.add(new Pe(i, new PeProvisionerSimple(mips)));  //34 PE to VM2
+        }
 
         //4. Create Hosts with its id and list of PEs and add them to the list of machines
         int hostId=0;
@@ -175,7 +157,7 @@ public class CloudSimFinalProject {
                         new BwProvisionerSimple(bw),
                         storage,
                         peList1,
-                        new VmSchedulerTimeShared(peList1)
+                        new VmSchedulerSpaceShared(peList1)
                 )
         ); // This is our first machine
 
@@ -188,34 +170,9 @@ public class CloudSimFinalProject {
                         new BwProvisionerSimple(bw),
                         storage,
                         peList2,
-                        new VmSchedulerTimeShared(peList2)
+                        new VmSchedulerSpaceShared(peList2)
                 )
         ); // Second machine
-
-
-        //To create a host with a space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerSpaceShared(peList1)
-        //		)
-        //	);
-
-        //To create a host with a oportunistic space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerOportunisticSpaceShared(peList1)
-        //		)
-        //	);
 
 
         // 5. Create a DatacenterCharacteristics object that stores the

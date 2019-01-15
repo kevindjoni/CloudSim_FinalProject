@@ -44,7 +44,6 @@ public class CloudSimFinalProject_SpaceShared {
         return list;
     }
 
-
     private static List<Cloudlet> createCloudlet(int userId, int cloudlets){
         // Creates a container to store Cloudlets
         LinkedList<Cloudlet> list = new LinkedList<Cloudlet>();
@@ -68,14 +67,13 @@ public class CloudSimFinalProject_SpaceShared {
         return list;
     }
 
-
     ////////////////////////// STATIC METHODS ///////////////////////
 
     /**
      * Creates main() to run this example
      */
     public static void main(String[] args) {
-        Log.printLine("Starting CloudSimExample6...");
+        Log.printLine("Starting Space-Shared Allocation Policy");
 
         try {
             // First step: Initialize the CloudSim package. It should be called
@@ -113,7 +111,7 @@ public class CloudSimFinalProject_SpaceShared {
 
             printCloudletList(newList);
 
-            Log.printLine("CloudSimExample6 finished!");
+            Log.printLine("Space-Shared Allocation Policy finished!");
         }
         catch (Exception e)
         {

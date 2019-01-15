@@ -56,7 +56,6 @@ public class CloudSimFinalProject_TimeShared {
         return list;
     }
 
-
     private static List<Cloudlet> createCloudlet(int userId, int cloudlets){
         // Creates a container to store Cloudlets
         LinkedList<Cloudlet> list = new LinkedList<Cloudlet>();
@@ -80,14 +79,13 @@ public class CloudSimFinalProject_TimeShared {
         return list;
     }
 
-
     ////////////////////////// STATIC METHODS ///////////////////////
 
     /**
      * Creates main() to run this example
      */
     public static void main(String[] args) {
-        Log.printLine("Starting CloudSimExample6...");
+        Log.printLine("Starting Time-Shared Allocation Policy");
 
         try {
             // First step: Initialize the CloudSim package. It should be called
@@ -125,7 +123,7 @@ public class CloudSimFinalProject_TimeShared {
 
             printCloudletList(newList);
 
-            Log.printLine("CloudSimExample6 finished!");
+            Log.printLine("Time-Shared Allocation Policy finished!");
         }
         catch (Exception e)
         {
@@ -188,32 +186,6 @@ public class CloudSimFinalProject_TimeShared {
                         new VmSchedulerTimeShared(peList2)
                 )
         ); // Second machine
-
-
-        //To create a host with a space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerSpaceShared(peList1)
-        //		)
-        //	);
-
-        //To create a host with a oportunistic space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerOportunisticSpaceShared(peList1)
-        //		)
-        //	);
-
 
         // 5. Create a DatacenterCharacteristics object that stores the
         //    properties of a data center: architecture, OS, list of

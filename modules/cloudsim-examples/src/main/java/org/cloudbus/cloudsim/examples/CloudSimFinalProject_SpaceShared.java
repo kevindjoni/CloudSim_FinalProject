@@ -138,8 +138,8 @@ public class CloudSimFinalProject_SpaceShared {
 
         int mips = 25000;
 
-        int num = 34;               //34 PE are each assigned to 1 VM; Therefore there are 68 PE in total
-        for(int i=0; i<num; i++)
+        int pe = 34;               //34 PE are each assigned to 1 VM; Therefore there are 68 PE in total
+        for(int i=0; i<pe; i++)
         {
             peList1.add(new Pe(i, new PeProvisionerSimple(mips)));  //34 PE to VM1
             peList2.add(new Pe(i, new PeProvisionerSimple(mips)));  //34 PE to VM2

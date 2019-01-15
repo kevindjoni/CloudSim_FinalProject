@@ -25,7 +25,7 @@ public class CloudSimFinalProject_SpaceShared {
 
         //VM Parameters
         long size = 256;    //image size (MB)
-        int ram = 520;      //vm memory (MB)
+        int ram = 5120;      //vm memory (MB)
         int mips = 250;
         long bw = 1000;
         int pesNumber = 1;  //number of cpus
@@ -96,7 +96,7 @@ public class CloudSimFinalProject_SpaceShared {
 
             //Fourth step: Create VMs and Cloudlets and send them to broker
             vmlist = createVM(brokerId,68);
-            cloudletList = createCloudlet(brokerId,178);
+            cloudletList = createCloudlet(brokerId,68);
 
             broker.submitVmList(vmlist);
             broker.submitCloudletList(cloudletList);

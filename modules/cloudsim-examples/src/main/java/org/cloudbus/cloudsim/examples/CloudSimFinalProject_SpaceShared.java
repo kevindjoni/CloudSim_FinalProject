@@ -98,8 +98,8 @@ public class CloudSimFinalProject_SpaceShared {
             int brokerId = broker.getId();
 
             //Fourth step: Create VMs and Cloudlets and send them to broker
-            vmlist = createVM(brokerId,68);                     //creating 20 vms
-            cloudletList = createCloudlet(brokerId,178);     //creating 40 cloudlets
+            vmlist = createVM(brokerId,68);
+            cloudletList = createCloudlet(brokerId,178);
 
             broker.submitVmList(vmlist);
             broker.submitCloudletList(cloudletList);

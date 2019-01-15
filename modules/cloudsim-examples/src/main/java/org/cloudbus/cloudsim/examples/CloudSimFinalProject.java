@@ -39,11 +39,11 @@ public class CloudSimFinalProject{
         LinkedList<Vm> list = new LinkedList<Vm>();
 
         //VM Parameters
-        long size = 256; //image size (MB)
-        int ram = 512; //vm memory (MB)
+        long size = 256;    //Image Size (MB)
+        int ram = 5120;     //VM memory (MB)
         int mips = 250;
         long bw = 1000;
-        int pesNumber = 1; //number of cpus
+        int pesNumber = 1;  //number of cpus
         String vmm = "Xen"; //VMM name
 
         //create VMs
@@ -113,8 +113,8 @@ public class CloudSimFinalProject{
             int brokerId = broker.getId();
 
             //Fourth step: Create VMs and Cloudlets and send them to broker
-            vmlist = createVM(brokerId,68);                     //creating 20 vms
-            cloudletList = createCloudlet(brokerId,178);     //creating 40 cloudlets
+            vmlist = createVM(brokerId,68);
+            cloudletList = createCloudlet(brokerId,68);
 
             broker.submitVmList(vmlist);
             broker.submitCloudletList(cloudletList);
@@ -192,31 +192,6 @@ public class CloudSimFinalProject{
                         new VmSchedulerTimeShared(peList2)
                 )
         ); // Second machine
-
-
-        //To create a host with a space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerSpaceShared(peList1)
-        //		)
-        //	);
-
-        //To create a host with a oportunistic space-shared allocation policy for PEs to VMs:
-        //hostList.add(
-        //		new Host(
-        //			hostId,
-        //			new CpuProvisionerSimple(peList1),
-        //			new RamProvisionerSimple(ram),
-        //			new BwProvisionerSimple(bw),
-        //			storage,
-        //			new VmSchedulerOportunisticSpaceShared(peList1)
-        //		)
-        //	);
 
 
         // 5. Create a DatacenterCharacteristics object that stores the
